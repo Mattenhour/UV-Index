@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="UVHour" representedClassName="UVHour" syncable="YES">
+        <attribute name="date_time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="uv_index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UVHours" inverseName="hours" inverseEntity="UVHours"/>
+    </entity>
+    <entity name="UVHours" representedClassName="UVHours" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="hours" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="UVHour" inverseName="origin" inverseEntity="UVHour"/>
+    </entity>
+    <elements>
+        <element name="UVHour" positionX="161.8046875" positionY="-11.35546875" width="128" height="103"/>
+        <element name="UVHours" positionX="-54" positionY="18" width="128" height="103"/>
+    </elements>
+</model>
