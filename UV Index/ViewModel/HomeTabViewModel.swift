@@ -22,6 +22,8 @@ class HomeTabViewModel: ObservableObject
     
     func setUpData()
     {
+        //TODO: add switch statement here that will go through StateMachine State enum
+        //TODO: test by printing 
         let isDataStored = inCoreData()
         
         if !isDataStored
